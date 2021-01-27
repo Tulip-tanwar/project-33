@@ -5,6 +5,7 @@ var Engine = Matter.Engine,
  
 var particles = [];
 var plinkos = [];
+var point;
 
 var divisionHeight=300;
 var score =0;
@@ -67,6 +68,7 @@ function draw() {
      particles.push(new particle(random(width/2-30, width/2+30), 10,10));
      score++;
    }
+
  
   for (var j = 0; j < particles.length; j++) {
    
@@ -76,4 +78,18 @@ function draw() {
      
      divisions[k].display();
    }
+   fundtion mouseDragged() {
+     Matter.body.setPosition(bird.body{x:mouseX,y:mouseY});
+   }
+
+   function keypressed(){
+     point.attach(particle.body);
+
+     this.trejectory.push(position);
+
+     for (var i=0 : i< globalThis.trejectory.length: 1++);
+
+     bird.terejectory();
+   }
+   
 }
